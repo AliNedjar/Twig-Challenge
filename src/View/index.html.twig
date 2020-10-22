@@ -1,13 +1,26 @@
 {% extends "base.html.twig" %}
+{% block title %}
+Twig Challenge
+{% endblock %}
 
 
 {% block content %}
-<h1>Clothes</h1>
+    <div class="container-fluid">
+        <div class="row">
 
-    <ul>
-{% for product in products %}
-      <li>{{product}}</li>
-</ul>
-{% endfor %}
+
+                {% for product in products %}
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">{{ product }}</p>
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+        </div>
+    </div>
 
 {% endblock %}
